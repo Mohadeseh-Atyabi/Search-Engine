@@ -18,4 +18,9 @@ Before creating the positional index, it is necessary to preprocess the texts. T
 - Remove stop words
 - Stemming
 
-To perform the necessary preprocessing, you can choose and use one of the ready-made libraries at your own discretion (Guide: [Library 1](https://github.com/ICTRC/Parsivar) and [Library 2](https://github.com/roshan-research/hazm)) or have your own implementation.
+To perform the necessary preprocessing, you can choose and use one of the ready-made libraries at your own discretion (Guide: [Library 1](https://github.com/ICTRC/Parsivar) and [Library 2](https://github.com/roshan-research/hazm)) or have your own implementation. Here I used Library 1 (hazm).
+
+### 2- Creating a positional index
+Build the positional index using the preprocessed documents in the previous step. In addition to the location of the words in the documents, in the created positional index, it should be known for each word from the dictionary how many times that word is repeated in all the documents. It should also be clear how many times a specific word is repeated in each document. To implement this part, you can choose a suitable data structure at your discretion. (Make sure that the selected data structure is not such that it slows down the model during search and other operations.)
+
+

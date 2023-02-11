@@ -53,3 +53,6 @@ Having the user's query, extract the vector specific to the query (calculate the
 
 ### 3- Increasing the speed of query processing
 By using the index elimination technique, the problem of high time in the previous step is solved to some extent, but the response time is still not acceptable for many applications. In order to increase the speed of processing and response, you can use Champion lists that before a question is raised and during the document processing stage, a list of the most relevant documents related to each term is kept in a separate list. To implement this section, after building the positional inverted index, create Champion lists and compare only the query vector with the vector of documents obtained by searching in Champion lists and display K related documents.
+
+## Notes
+The result of search is returned in query function. Pay attention that if you return **dictionary_temp**, the first phase is implemented. To run second phase you can return **sim** in this function. Feel free to change the return parameter to run different phases of the project :)
